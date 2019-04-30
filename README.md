@@ -1,6 +1,8 @@
 # device_htc_ocla1_sprout
 device tree for building twrp for htc u11 life android one edition
 
+Device source cloned from @captain_throwback here https://github.com/CaptainThrowback/android_device_htc_ime and modified using files from ocla1_sprout
+More changes are needed.
 
 
 
