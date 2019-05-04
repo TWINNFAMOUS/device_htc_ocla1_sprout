@@ -46,23 +46,27 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Kernel
-TARGET_USES_ION := true
-TARGET_USES_NEW_ION_API :=true
-ifneq ($(TARGET_USES_AOSP),true)
-TARGET_USES_QCOM_BSP := true
-endif
+#TARGET_USES_ION := true
+#TARGET_USES_NEW_ION_API := true
+#ifneq ($(TARGET_USES_AOSP),true)
+#TARGET_USES_QCOM_BSP := true
+#endif
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.hardware=htc_ocl androidkey.dummy=1 buildvariant=eng androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += skip_override androidboot.fastboot=1
+BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_PREBUILT_KERNEL := device/$(BOARD_VENDOR)/$(TARGET_DEVICE)/prebuilt/kernel
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --board boot:0
+
+
+TARGET_PREBUILT_KERNEL := device/htc/ocl/prebuilt/Image.gz-dtb
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4009754624
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3938451456
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 16719544320
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -99,19 +103,32 @@ TW_USE_TOOLBOX := true
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
+# A/B updater updatable partitions list. Keep in sync with the partition list
+# with "_a" and "_b" variants in the device. Note that the vendor can add more
+# more partitions to this list for the bootloader and radio.
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor \
+    vbmeta \
+    dtbo 
+
 # Custom Platform Version and Security Patch
 # TWRP Defaults
 #PLATFORM_VERSION := 16.1.0
 #PLATFORM_SECURITY_PATCH := 2025-12-05
 # Must match build.prop of current system for vold decrypt to work properly!
 PLATFORM_VERSION := 9
-PLATFORM_SECURITY_PATCH := 2025-12-31
+PLATFORM_SECURITY_PATCH := 2019-04-o1
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
 TW_CRYPTO_USE_SYSTEM_VOLD := hwservicemanager servicemanager qseecomd keymaster-3-0
 TW_CRYPTO_SYSTEM_VOLD_MOUNT := vendor
+
+TW_EXCLUDE_TWRPAPP := true
+TW_INCLUDE_REPACKTOOLS := true
 
 # TWRP Debug Flags
 TWRP_EVENT_LOGGING := true

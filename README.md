@@ -149,3 +149,121 @@ nodev   pstore
 nodev   selinuxfs
 nodev   functionfs
         texfat
+
+C:\Program Files (x86)\Minimal ADB and Fastboot>adb shell
+1|htc_ocla1_sprout:/ $ ls -al /dev/block/platform/soc/c0c4000.sdhci/by-name
+
+total 0
+drwxr-xr-x 2 root root 2240 1971-02-10 03:13 .
+drwxr-xr-x 3 root root 1800 1971-02-10 03:13 ..
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 abl -> /dev/block/mmcblk0p60
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 abl_a -> /dev/block/mmcblk0p10
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 abl_b -> /dev/block/mmcblk0p60
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 adsp -> /dev/block/mmcblk0p67
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 adsp_a -> /dev/block/mmcblk0p25
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 adsp_b -> /dev/block/mmcblk0p67
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 apdp -> /dev/block/mmcblk0p17
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 bluetooth -> /dev/block/mmcblk0p65
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 bluetooth_a -> /dev/block/mmcblk0p21
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 bluetooth_b -> /dev/block/mmcblk0p65
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 board_info -> /dev/block/mmcblk0p1
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 boot -> /dev/block/mmcblk0p83
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 boot_a -> /dev/block/mmcblk0p53
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 boot_b -> /dev/block/mmcblk0p83
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 carrier -> /dev/block/mmcblk0p47
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib -> /dev/block/mmcblk0p63
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib64 -> /dev/block/mmcblk0p64
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib64_a -> /dev/block/mmcblk0p16
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib64_b -> /dev/block/mmcblk0p64
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib_a -> /dev/block/mmcblk0p15
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 cmnlib_b -> /dev/block/mmcblk0p63
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 control -> /dev/block/mmcblk0p51
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 ddr -> /dev/block/mmcblk0p22
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 devcfg -> /dev/block/mmcblk0p62
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 devcfg_a -> /dev/block/mmcblk0p14
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 devcfg_b -> /dev/block/mmcblk0p62
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 devinfo -> /dev/block/mmcblk0p3
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 devlog -> /dev/block/mmcblk0p38
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dip -> /dev/block/mmcblk0p68
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dip_a -> /dev/block/mmcblk0p26
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dip_b -> /dev/block/mmcblk0p68
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dpo -> /dev/block/mmcblk0p73
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dpo_a -> /dev/block/mmcblk0p19
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dpo_b -> /dev/block/mmcblk0p73
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dsp -> /dev/block/mmcblk0p71
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dsp_a -> /dev/block/mmcblk0p50
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dsp_b -> /dev/block/mmcblk0p71
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dtbo -> /dev/block/mmcblk0p81
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dtbo_a -> /dev/block/mmcblk0p77
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 dtbo_b -> /dev/block/mmcblk0p81
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 extra -> /dev/block/mmcblk0p40
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 fataldevlog -> /dev/block/mmcblk0p37
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 frp -> /dev/block/mmcblk0p45
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 fsc -> /dev/block/mmcblk0p41
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 fsg -> /dev/block/mmcblk0p24
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 hosd -> /dev/block/mmcblk0p61
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 hosd_a -> /dev/block/mmcblk0p11
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 hosd_b -> /dev/block/mmcblk0p61
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 hvbmeta -> /dev/block/mmcblk0p4
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 hyp -> /dev/block/mmcblk0p59
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 hyp_a -> /dev/block/mmcblk0p9
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 hyp_b -> /dev/block/mmcblk0p59
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 keymaster -> /dev/block/mmcblk0p70
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 keymaster_a -> /dev/block/mmcblk0p49
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 keymaster_b -> /dev/block/mmcblk0p70
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 limits -> /dev/block/mmcblk0p28
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 local -> /dev/block/mmcblk0p39
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 lockbooter -> /dev/block/mmcblk0p69
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 lockbooter_a -> /dev/block/mmcblk0p48
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 lockbooter_b -> /dev/block/mmcblk0p69
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 logdump -> /dev/block/mmcblk0p31
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 logfs -> /dev/block/mmcblk0p30
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 mfg -> /dev/block/mmcblk0p2
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 misc -> /dev/block/mmcblk0p33
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 modemst1 -> /dev/block/mmcblk0p35
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 modemst2 -> /dev/block/mmcblk0p36
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 msadp -> /dev/block/mmcblk0p72
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 msadp_a -> /dev/block/mmcblk0p18
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 msadp_b -> /dev/block/mmcblk0p72
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 persist -> /dev/block/mmcblk0p43
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 pg1fs -> /dev/block/mmcblk0p13
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 pmic -> /dev/block/mmcblk0p58
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 pmic_a -> /dev/block/mmcblk0p8
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 pmic_b -> /dev/block/mmcblk0p58
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 radio -> /dev/block/mmcblk0p66
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 radio_a -> /dev/block/mmcblk0p23
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 radio_b -> /dev/block/mmcblk0p66
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 ramdump -> /dev/block/mmcblk0p46
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 reserve1 -> /dev/block/mmcblk0p27
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 reserve2 -> /dev/block/mmcblk0p52
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 reserve3 -> /dev/block/mmcblk0p82
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 reserved_oem -> /dev/block/mmcblk0p34
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 rpm -> /dev/block/mmcblk0p57
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 rpm_a -> /dev/block/mmcblk0p7
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 rpm_b -> /dev/block/mmcblk0p57
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 sec -> /dev/block/mmcblk0p44
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 sp1 -> /dev/block/mmcblk0p20
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 ssd -> /dev/block/mmcblk0p42
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 sti -> /dev/block/mmcblk0p32
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 storsec -> /dev/block/mmcblk0p78
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 storsec_a -> /dev/block/mmcblk0p74
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 storsec_b -> /dev/block/mmcblk0p78
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 system -> /dev/block/mmcblk0p84
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 system_a -> /dev/block/mmcblk0p54
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 system_b -> /dev/block/mmcblk0p84
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 tool_diag -> /dev/block/mmcblk0p12
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 toolsfv -> /dev/block/mmcblk0p29
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 tz -> /dev/block/mmcblk0p56
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 tz_a -> /dev/block/mmcblk0p6
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 tz_b -> /dev/block/mmcblk0p56
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 userdata -> /dev/block/mmcblk0p85
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vbmeta -> /dev/block/mmcblk0p79
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vbmeta_a -> /dev/block/mmcblk0p75
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vbmeta_b -> /dev/block/mmcblk0p79
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vendor -> /dev/block/mmcblk0p80
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vendor_a -> /dev/block/mmcblk0p76
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 vendor_b -> /dev/block/mmcblk0p80
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 xbl -> /dev/block/mmcblk0p55
+lrwxrwxrwx 1 root root   20 1971-02-10 03:13 xbl_a -> /dev/block/mmcblk0p5
+lrwxrwxrwx 1 root root   21 1971-02-10 03:13 xbl_b -> /dev/block/mmcblk0p55
+
