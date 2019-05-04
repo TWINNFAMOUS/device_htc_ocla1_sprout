@@ -119,7 +119,7 @@ AB_OTA_PARTITIONS += \
 #PLATFORM_SECURITY_PATCH := 2025-12-05
 # Must match build.prop of current system for vold decrypt to work properly!
 PLATFORM_VERSION := 9
-PLATFORM_SECURITY_PATCH := 2019-04-o1
+PLATFORM_SECURITY_PATCH := 2019-04-01
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
