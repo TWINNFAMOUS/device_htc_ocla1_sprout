@@ -43,7 +43,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 TARGET_NO_BOOTLOADER := true
 # come back to this ######
-#TARGET_USES_UEFI := true
+TARGET_USES_UEFI := true
 
 # Kernel
 TARGET_USES_ION := true
@@ -53,16 +53,16 @@ TARGET_USES_QCOM_BSP := true
 endif
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.hardware=htc_ocl androidkey.dummy=1 buildvariant=eng androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
+BOARD_KERNEL_CMDLINE += skip_override androidboot.fastboot=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_PREBUILT_KERNEL := device/$(BOARD_VENDOR)/$(TARGET_DEVICE)/prebuilt/Image.lz4-dtb
+TARGET_PREBUILT_KERNEL := device/$(BOARD_VENDOR)/$(TARGET_DEVICE)/prebuilt/kernel
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3938451456
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4009754624
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 16719544320
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4

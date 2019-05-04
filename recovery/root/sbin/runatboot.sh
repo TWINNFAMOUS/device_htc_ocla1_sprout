@@ -55,43 +55,24 @@ log_info "MID Found: $bootmid"
 log_info "CID Found: $bootcid"
 
 case $bootmid in
-	"2Q5510000")
-		## EMEA/Aisa TW/RUS/SEA India Dual-SIM ##
-		if [ $hardware == 'htc_exo' ]; then
-			update_product_device "htc_exodugl";
-			update_model "EXODUS 1"
-		else
-			update_product_device "htc_imedugl";
+	"2Q3F50000")
+		## japan ##
+		if [ $hardware == 'htc_ocl' ]; then
+			update_product_device "htc_ocla1_sprout";
 			log_info "Current model: $model"
 		fi
 		;;
-	"2Q5520000")
-		## EMEA/US Unlocked, Single-SIM ##
-		if [ $hardware == 'htc_exo' ]; then
-			update_product_device "htc_exouhl";
-			update_model "EXODUS 1"
-		else
-			update_product_device "htc_imeuhl";
+	"2Q3F20000")
+		## HTC Europe ##
+		if [ $hardware == 'htc_ocl' ]; then
+			update_product_device "htc_ocla1_sprout";
 			log_info "Current model: $model"
-		fi
-		;;
-	"2Q5530000")
-		## CHINA, Dual-SIM ##
-		if [ $hardware == 'htc_exo' ]; then
-			update_product_device "htc_exodtwl";
-			update_model "EXODUS 1"
-		else
-			update_product_device "htc_imedtwl";
-			update_model "HTC 2Q55300"
 		fi
 		;;
 	*)
 		log_error "MID not found. Setting default values."
-		if [ $hardware == 'htc_exo' ]; then
-			update_product_device "htc_exodugl";
-			update_model "EXODUS 1"
-		else
-			update_product_device "htc_imedugl";
+		if [ $hardware == 'htc_ocl' ]; then
+			update_product_device "htc_ocla1_sprout";
 			log_info "Current model: $model"
 		fi
 		;;
